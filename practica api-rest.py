@@ -16,3 +16,13 @@ for book in data['docs'][:5]:
 df = pd.DataFrame(data['docs'])
 print(df.columns)
 df.head()
+
+#%%%%%%
+params = {"subject": "Fiction", "limit": 5}
+
+response = requests.get(url, params=params)
+data = response.json()
+
+df = pd.DataFrame(data['docs'])
+print(df.columns)
+df.head()
